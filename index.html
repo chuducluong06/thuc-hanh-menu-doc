@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành Tạo Menu Dọc Dropdown</title>
+    <style>
+        /* Đặt font chữ và reset lề */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            margin: 40px;
+        }
+
+        #menu, #menu ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        #menu li {
+            list-style: none;
+            position: relative;
+            width: 140px;
+            height: 35px;
+            padding: 0 15px;
+            background-color: #2c3e50;
+            line-height: 35px;
+            cursor: pointer;
+            margin-bottom: 2px;
+            border-radius: 4px;
+        }
+
+        #menu li a {
+            text-decoration: none;
+            color: #ffffff;
+            display: block;
+        }
+
+        #menu li:hover {
+            background-color: #34495e;
+        }
+
+        /* Danh sách con (dropdown) */
+        #menu ul {
+            position: absolute;
+            top: 0;
+            left: 170px; /* Đặt cách menu cha một khoảng */
+            visibility: hidden;
+        }
+
+        /* Hiển thị danh sách con khi đưa chuột vào phần tử cha */
+        #menu li:hover > ul {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="menu">
+        <ul>
+            <li><a href="#">Trang Chủ</a></li>
+            <li><a href="#">Sản Phẩm &uarr;</a>
+                <ul>
+                    <li><a href="#">Điện Thoại</a></li>
+                    <li><a href="#">Laptop</a></li>
+                    <li><a href="#">Máy Tính Bảng</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Dịch Vụ &uarr;</a>
+                <ul>
+                    <li><a href="#">Thiết Kế Web</a></li>
+                    <li><a href="#">Lập Trình App</a></li>
+                    <li><a href="#">SEO & Marketing</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Liên Hệ</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
